@@ -1,6 +1,5 @@
 varrer calçada
 estudar python
-lavar carro
 Formatar PC
 jogar GOW
 limpar churrasqueira
