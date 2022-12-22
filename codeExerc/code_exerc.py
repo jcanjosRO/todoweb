@@ -1,6 +1,8 @@
 import PySimpleGUI as sg
 import functions as fc
 
+sg.theme("Black")
+
 
 label1 = sg.Text("Digite quantidade em feet: ")
 input1 = sg.Input()
@@ -10,13 +12,14 @@ input2 = sg.Input()
 
 
 convert_button = sg.Button("Converter")
+saida_label = sg.Text(key="output", text_color="green")
 
-saida_label = sg.Text(key="output", text_color="white")
+exit_button = sg.Button("Sair")
 
-window = sg.Window("Convertor para Metros",
+window = sg.Window("Conversor para Metros",
                    layout=[[label1, input1],
                             [label2, input2],
-                             [convert_button, saida_label]])
+                             [convert_button, exit_button, saida_label]])
 
 while True:
     event,values = window.read()
@@ -31,6 +34,10 @@ while True:
 
             result = fc.convert(feet, inches)
             window["output"].update(value=f"{result} m")
+
+        case "Sair":
+            break
+
 
         case sg.WIN_CLOSED:
             break
