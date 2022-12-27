@@ -7,3 +7,4 @@ ver tv!!
 cortar grama
 estudar Python!
 fazer compras
+limpar geleira
